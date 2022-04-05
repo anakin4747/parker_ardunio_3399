@@ -22,12 +22,12 @@ void loop() {
   resist = (10000/((Vout/5.0000) + 0.5)) - 10000;
 
   
-  //temp = 3455.00 / (11.588 + log(resist));
+ 
   temp = 1 / ((log(resist/10000.000)/3428) + (1/298.15));
   
   temp = temp - 273.15;
   
-
+  /*
   Serial.print("\nV1 is ");
   Serial.print(v1);
   Serial.print("\nV2 is ");
@@ -36,6 +36,8 @@ void loop() {
   Serial.print(Vout);
   Serial.print("\nResistance is ");
   Serial.print(resist);
+  */
+  
   Serial.print("\nTemp is ");
   Serial.print(temp);
   delay(2000);
